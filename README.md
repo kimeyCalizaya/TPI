@@ -31,4 +31,9 @@ PWA (Progressive Web App) instalable
 -Kimey Calizaya
 
 ## Capturas de Pantalla
-![Descripción](ruta/a/la/captura.png)
+![Captura Principal](assets/images/Captura%20principal.png)
+![Galería 1](assets/images/Captura_galeria.png)
+![Galería 2](assets/images/Captura_galeria2.png)
+![Galería 3](assets/images/Captura_galeria3.png)
+![Formulario de Contacto](assets/images/Captura_formulario.png)
+![Formulario 2](assets/images/Captura_formulario2.png)
