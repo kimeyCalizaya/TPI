@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paisajes de Argentina - Galería Interactiva</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-logo">🇦🇷 Paisajes Argentinos</h1>
+                <button class="nav-toggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><button id="dark-mode-toggle" aria-label="Cambiar modo oscuro/claro">🌙</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h2>Descubre los paisajes más increíbles de Argentina</h2>
+                <p>Desde la Patagonia hasta el Norte, un recorrido visual por nuestra tierra</p>
+                <a href="#galeria" class="cta-button">Ver Galería</a>
+            </div>
+        </section>
+
+        <section id="galeria" class="gallery-section">
+            <h2>Galería de Paisajes</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="norte">Norte</button>
+                <button class="filter-btn" data-filter="centro">Centro</button>
+                <button class="filter-btn" data-filter="patagonia">Patagonia</button>
+            </div>
+            
+            <div class="gallery-grid">
+            </div>
+        </section>
+
+        <!-- fromulario -->
+        <section id="contacto" class="contact-section">
+            <h2>Contacto</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="validation-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="validation-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Teléfono:</label>
+                    <input type="tel" id="phone" name="phone">
+                    <span class="validation-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Fecha de contacto:</label>
+                    <input type="date" id="date" name="date">
+                </div>
+                
+                <div class="form-group">
+                    <label>Región de interés:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="region" value="norte"> Norte</label>
+                        <label><input type="radio" name="region" value="centro"> Centro</label>
+                        <label><input type="radio" name="region" value="patagonia"> Patagonia</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Servicios de interés:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="services" value="fotos"> Fotografías</label>
+                        <label><input type="checkbox" name="services" value="tours"> Tours virtuales</label>
+                        <label><input type="checkbox" name="services" value="impresiones"> Impresiones</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-caption"></div>
+            <button class="lightbox-nav lightbox-prev">‹</button>
+            <button class="lightbox-nav lightbox-next">›</button>
+        </div>
+    </div>
+
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Paisajes de Argentina - Kimey Calizaya</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
